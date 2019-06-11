@@ -1,0 +1,465 @@
+    
+
+html {
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+}
+
+
+body {
+	margin: auto;
+	background-image: url("image/bgimg2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+header{
+	background-image: url("image/leaves_falling.gif");
+	background-size: 380px 284px; 
+	background-repeat: no-repeat;
+}
+
+.page-wrapper {
+	width: 380px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(255,255,255);
+	border:#2C2C2C;
+	border-style: solid;
+	border-width: 1px;
+}
+
+
+
+
+/******** header design *******/
+
+@keyframes banner-ani {
+    from {color:rgb(232,201,0)}
+	to {color: rgb(59,137,171);}
+}
+	
+	
+#zen-intro {
+	position:relative;
+	width:100%;
+	height:auto;
+}
+	
+#zen-intro h1 {
+	margin:0;
+	font-family: 'Poppins', sans-serif;
+	font-size:500%;
+	color: rgba(127,199,244,0.70);
+	text-align:center;
+	letter-spacing:3%;
+	text-shadow:5px 5px 10px rgba(158,184,25,0.7);
+	animation-name: banner-ani;
+    animation-duration:2s;
+	animation-delay:4s;
+	animation-timing-function:linear;
+	text-transform: uppercase;
+	padding: 60px;
+	background-image: url("image/tea.png");
+	background-size: 150px;
+	background-repeat: no-repeat;
+	background-position: 95% 100%;
+
+	/*-webkit-animation-name:banner-ani;
+    -webkit-animation-duration:5s;
+	-webkit-animation-timing-function:linear;*/
+}
+
+#zen-intro h2 {
+	margin: 30px 0px 0px 0px;
+	font-family: 'roboto', sans-serif;
+	font-weight:300;
+	font-size:22px;
+	color: #c03000;
+	padding: 55px;
+	background-image: url("image/bgimg3.jpg");
+	background-repeat: no-repeat;
+	background-position: 100%;
+	background-size: cover;
+	position: relative;	
+	text-align: center;
+}
+
+.summary {
+	padding: 0px 17px 17px 17px;
+	font-family: 'Roboto', sans-serif;
+	color:#000000;
+	font-weight: 300;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+
+
+
+
+/******** section background *******/
+
+.preamble {
+	background-color: #CCE9FB;
+}
+
+.explanation {
+	background-color: #D8E3A3;
+}
+
+.participation {
+	background-color: #CCE9FB;
+}
+
+.benefits {
+	background-color: #D8E3A3;
+}
+
+.requirements {
+	background-color: #CCE9FB;
+}
+
+.requirements p {
+	padding: 0px 17px 17px 17px;
+	font-family: 'Roboto', sans-serif;
+	color:black;
+	font-weight: 300;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+
+
+/******** font style *******/
+
+p {
+	padding: 0px 17px 17px 17px;
+	font-family: 'Roboto', sans-serif;
+	color:black;
+	font-weight: 300;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+
+h3 {
+	font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-align: left;
+ 	text-transform: uppercase;
+	padding: 5px 10px 10px 20px;
+}
+
+
+
+
+
+
+
+/******** links design *******/
+
+a:link {
+	text-decoration: none;
+	color:#c5d475;
+}
+
+a:visited {
+	text-decoration: none;
+	color:#c03000;
+}
+
+a:hover {
+	color: #c03000;
+}
+
+footer a:hover {
+	background-color: rgba(255,255,255,1);
+}
+
+
+footer {
+	background-image:url("image/img_footer_2.jpg");
+	background-size:380px 227px;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	height:227px;
+
+}
+
+footer a {
+	position: relative;
+	top: 80px;
+	left: 10px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.7);
+	padding: 19px;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+
+
+
+
+/******** design-archives *******/
+
+.design-archives {
+	background-image: url("image/leaves_falling.gif");
+	background-size:380px 250px;
+	background-repeat: no-repeat;
+}
+
+.design-archives a {
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.design-archives h3 {
+	text-align: left;
+	background-color: #cce9fb;
+}
+
+.design-archives li {
+	list-style: none;
+	padding: 0px 0px 5px 5px;
+}
+
+
+
+
+/******** zen-resources *******/
+
+.resources {
+	text-align: left;
+	background-color: #d8e3a3;
+}
+
+.zen-resources  {
+	background-image: url("image/bgimg_footer.png");
+	background-size:180px 100px;
+	background-repeat: no-repeat;
+	background-position: 90% 100%;
+	padding: 5px 0px 20px 0px;
+	margin: 5px 0px 40px 0px;
+}
+
+.zen-resources a {
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.zen-resources li {
+	list-style: none;
+	padding: 0px 0px 5px 5px;
+}
+
+
+
+
+
+	
+     /* collapsisble design */
+
+    /* Elements of these classes are hidden by default until made 'active' by
+     * clicking on them */
+	.preamble, .explanation, .participation, .benefits, .requirements {
+		clear:both;
+		width:360px;
+		height:60px;
+		margin:0 auto 0 auto;
+		padding:10px;
+		transition:all 0.5s ease-in-out;
+		overflow:hidden;
+	}
+
+
+    /* Change the background color of h3's on hover */
+	.preamble:hover h3 {
+		background-color: #B2DDF8;
+	}
+
+	.explanation:hover h3 {
+		background-color: #c5d475;
+	}
+
+	.participation:hover h3 {
+		background-color: #B2DDF8;
+	}
+
+	.benefits:hover h3 {
+		background-color: #c5d475;
+	}
+	
+	.requirements:hover h3 {
+		background-color: #B2DDF8;
+		
+	}
+
+
+
+
+    /* When divs of these classes are clicked, they become 'active' and their
+     * height is grown */
+	.preamble-active {
+		height:320px;
+	}
+
+	.explanation-active {
+		height:320px;
+	}
+
+	.participation-active {
+		height:400px;
+	}
+
+	.benefits-active {
+		height:200px;
+	}
+
+	.requirements-active {
+		height:700px;
+	}
+
+
+
+    /* Additional content on h3's to show a unicode 'plus' sign */
+    .preamble h3::after {
+        content: "\FF0B";
+        float: right;
+    }
+
+    .explanation h3::after {
+        content: "\FF0B";
+        float: right;
+    }
+
+    .participation h3::after {
+        content: "\FF0B";
+        float: right;
+    }
+
+    .benefits h3::after {
+        content: "\FF0B";
+        float: right;
+    }
+	
+    .requirements h3::after {
+        content: "\FF0B";
+        float: right;
+    }
+
+
+
+    /* h3's that are active change their additional content's unicode 'plus'
+     * sign to a unicode 'minus' sign */
+    .preamble-active h3::after {
+        content: "\FF0D";
+        float: right;
+    }
+
+    .explanation-active h3::after {
+        content: "\FF0D";
+        float: right;
+    }
+
+    .participation-active h3::after {
+        content: "\FF0D";
+        float: right;
+    }
+
+    .benefits-active h3::after {
+        content: "\FF0D";
+        float: right;
+    }
+
+    .requirements-active h3::after {
+        content: "\FF0D";
+        float: right;
+    }
+
+
+
+    /* Additional content on sidebar to show 'hamburger' symbol */
+    .sidebar::after {
+        content: "\2630";
+        /* position: fixed; */
+        font-size: 30px;
+        position: relative;
+        right: -280px;
+        top: -1670px;
+		color: #c5d475;
+
+    }
+
+    /* Additional content on sidebar changes when clicked to show 'X' symbol */
+    .hamburger-active::after {
+        content: "\2715";
+        /* position: fixed; */
+        font-size: 30px;
+        position: relative;
+        right: -280px;
+        top: -1670px;
+		color: #c5d475;
+    }
+
+    .design-selection {
+        /* clear:both; */
+        width:380px;
+        height:0px;
+        margin:0 auto 0 auto;
+        padding:0;
+        transition:all 0.5s ease-in-out;
+        overflow:hidden;
+        position: absolute;
+        top: 0;
+        background-image: url("image/nav_img_01.png");
+		background-size: 380px 300px;
+		background-repeat: no-repeat;
+    }
+
+    .design-selection-active {
+        height:300px;
+    }
+
+.sidebar li {
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 1px;
+}
+
+.sidebar h3 {
+	background-color: #cce9fb;
+	padding: 5px 0px 5px 25px;
+}
+
+.sidebar li a:nth-child(even) {
+	color: #c03000;
+}
+
+abbr:nth-child(1){
+	color: #7fc7f4;
+}
+
+abbr:nth-child(2){
+	color: #c03000;
+}
+    .hamburger-active {
+        /* TODO */
+    }
