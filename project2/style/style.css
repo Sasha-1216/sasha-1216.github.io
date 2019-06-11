@@ -1,0 +1,406 @@
+
+/****** body, html and wraper ******/
+body, html {
+    position: relative;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font: 400 15px/1.8 "quicksand", sans-serif;
+    color: #777;
+}
+
+#wrapper {
+    position: relative;
+    height: auto;
+    z-index: 1;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+
+
+
+/*****navigation section*****/
+nav {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    padding: 0px 0px 0px 0px;
+	font-family: quicksand;
+	font-size: 30px;
+}
+
+nav a:link {
+    color: gray;
+    text-decoration: none;
+}
+
+nav a:hover:not(.active) {
+    color: white;
+}
+
+nav a:visited {
+    color: gray;
+}
+
+nav a {
+    display:inline-block
+}
+
+
+
+/*****padding adjustment*****/
+
+.pad-right {
+    padding: 0px 15px 0px 0px
+}
+
+.pad-left {
+    padding: 0px 0px 0px 15px
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+
+
+
+
+
+
+/*********** parallax ***********/
+
+.music-bgimg-1, .music-bgimg-2, .music-bgimg-3,
+.home-bgimg-1, .home-bgimg-2, .home-bgimg-3 {
+    position: relative;
+    /* opacity: 0.65; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+}
+
+.cover {
+    width: 60%;
+}
+
+.music-bgimg-1 {        /***** cinemagraph backgroud image *****/
+    background-image: url("../img/stars.gif");
+    min-height: 720px;
+}
+
+.music-bgimg-2 {
+    background-image: url("../img/queen_concert_2.jpg");
+    min-height: 400px;
+}
+
+.music-bgimg-3 {
+    background-image: url("../img/queen_concert_3.png");
+    min-height: 400px;
+}
+
+.home-bgimg-1 {
+    background-image: url("../img/stars.gif");
+    min-height: 720px;
+}
+
+.home-bgimg-2 {
+    background-image: url("../img/queen_smoke.jpg");
+    min-height: 400px;
+}
+
+.home-bgimg-3 {
+    background-image: url("../img/concert.jpg");
+    min-height: 400px;
+	text-align:center; 
+    display:table;
+    width:100%;
+}
+
+
+
+
+
+
+/******main section*****/
+
+#rockopera {
+    display: flex;
+    padding: 0px 0px 0px 0px;
+    background-image: url("../img/queen_smoke_4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    text-align:center; 
+}
+
+.rockopera {
+    font-size: 100px;
+    color: white;
+    position: relative;
+	display:table-cell; 
+	vertical-align:middle;
+	width: 100%;
+}
+
+#champions {
+    background-color: transparent;
+    font-family: quicksand;
+    font-size: 80px;
+    font-weight: 700;
+    color: #f7f7f7;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#classic {
+    font-family: quicksand;
+    font-size: 80px;
+    font-weight: 700;
+    color: #f7f7f7;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+}
+
+#achievement {
+    font-family: quicksand;
+    font-size: 80px;
+    font-weight: 700;
+    color: #f7f7f7;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	text-align: center;
+	width:100%;
+}
+
+
+#iframe-queen-website {
+	text-align:center; 
+    display:table;
+    width:100%;
+	margin: 0 0 0 0;
+}
+
+#iframe-youtube {
+	text-align:center; 
+    display:table;
+    width:100%;
+	margin: 0 0 0 0;
+}
+
+.playlist {                    /***** audio playlists *****/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    text-align: center;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-image {
+    float: left;
+    width:45%;
+    padding:70px 60px 40px 0px;
+}
+
+.article-image-2 {
+    float: left;
+    width:45%;
+    padding:70px 60px 40px 0px;
+}
+
+
+
+
+
+
+/*****paragraphs, fonts*****/
+
+.white-bg-paragraph {  /***** white background paragraph *****/
+	color: #777;
+	background-color: white;
+	text-align:center;
+}
+
+.black-bg-paragraph {  /***** black background paragraph *****/
+    position: relative;
+	text-align:center;
+    color:#ddd;
+    background-color:#282E34;
+    padding:20px 30px;
+}
+
+p {
+    hyphens: auto;
+    margin: 50px;
+    text-align: left;
+}
+
+h3 {                       /***** subheader of paragraph *****/
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "quicksand", sans-serif;
+	text-align:center;
+    padding: 70px 0px 0px 0px;
+    
+}
+
+h6 {                   /***** citation *****/
+	text-align:left;
+    margin: 50px;
+    hyphens: auto;
+}
+
+
+
+
+
+/*****footer section*****/
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+footer li {
+    display: inline;
+    padding: 0;
+}
+
+footer h1 {
+    text-align: center;
+}
+
+footer p {
+	text-align: center; 
+	font-size: 10px;
+	line-height: 20px; 
+	padding-bottom: 10px;
+}
+
+footer a:link {
+    color: gray;
+    text-decoration: none;
+}
+footer a:visited {
+    color: gray;
+}
+
+footer, h6 a:link {
+    color: gray;
+    text-decoration: none;
+}
+
+footer a:hover:not(.active) {
+    color: white;
+}
+
+footer a:visited {
+    color: gray;
+}
+
+#footerinfo {
+    margin: 0;
+    color: lightgray;
+    letter-spacing: 2px;
+	font-family:quicksand;
+}
+
+.socialmedia { 
+    width: 50px;
+    height: 50px;
+    padding: 5px 5px 25px 5px;
+}
+
+
+
+
+
+
+/*****responsive design section for iPhone 6S   750px width*****/
+
+@media screen and (max-width: 750px) {
+    .home-bgimg-1, .home-bgimg-2, .home-bgimg-3,
+    .music-bgimg-1, .music-bgimg-2, .music-bgimg-3 {
+        background-attachment: fixed;
+    }
+
+    .article-image {  /***** stack image and paragraph *****/
+        display: block;
+        width: 100%;
+        padding:0px 0px 35px 0px;
+        position: relative;
+        top: -100px;
+    }
+
+    .article-image-2 {   /***** stack image and paragraph *****/
+        display: block;
+        width: 100%;
+        padding:0px 0px 35px 0px;
+        position: relative;
+        top: 0px;
+    }
+
+    nav li {
+        font-size: 20px;
+    }
+
+    .cover {
+        width: 100%;
+    }
+
+    .home-bgimg-2 {
+        width: 100%;
+
+    }
+
+    .rockopera {
+        line-height: 90px; /***** change to small font size *****/
+        font-size: 70px;
+    }
+
+    #champions {
+        font-size: 60px;  /***** change to small font size *****/
+        line-height: 60px;
+    }
+
+    #classic {	
+        font-size: 50px;  /***** change to small font size *****/
+		line-height: 60px;
+
+    }
+
+    #achievement{
+        font-size: 50px;  /***** change to small font size *****/
+   		line-height: 60px;
+    }
+}
