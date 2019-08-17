@@ -1,0 +1,776 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-image: url("images/background-2.jpg");
+	background-repeat: round;
+}
+
+#wrapper {
+	margin: 0px 50px;
+	position: relative;
+	heigth: auto;
+	z-index: 1;	
+	width: auto;
+}
+
+#hello {
+	margin-top: -20px;
+}
+
+#header {
+	text-align: center;
+	position: relative;
+	padding: 10px;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+  	border-right: .1em solid white; /* The typwriter cursor */
+  	white-space: nowrap; /* Keeps the content on a single line */
+  	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  	letter-spacing: .1em; /* Adjust as needed */
+  	animation: 
+    typing 3.5s steps(30,end),
+    blinking-cursor 1s step-end infinite;
+}
+
+#container {
+	height: auto;
+	width: 100%;	
+	border-radius: 18px;
+	box-shadow: 6.5px -5px gray;
+	background-color:#F0F0F0;
+	overflow: hidden;
+	padding-bottom: 60px;
+	display: inline-block;
+	
+}
+
+#nav {
+	height:auto;
+	border-top-left-radius: 17.5px;
+	border-top-right-radius: 17.5px;
+	background-color:#C68642;
+	text-align: center;
+	padding: 10px 0px;
+	position: relative;
+}
+
+#nav li {
+	display: inline;
+	position: relative;
+	list-style: none; /*clear the bullet points*/
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: 0px 5px;
+}
+	
+#notes {
+	float: left;
+	overflow: hidden;
+	display: inline;
+	margin-left: 30px;
+	width: 60%;
+}
+
+/* The typing effect */
+@keyframes typing {
+	
+  from { width: 0 }
+  to { width: 60%}
+}
+
+.logo {
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 60px;
+	color: #EFEFEF;
+}
+
+/* The typewriter cursor effect */
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+#nav li a:link {
+	text-decoration: none;
+	color:#C68642;
+}
+
+#nav li a:visited {
+	text-decoration: none;
+	color:#C68642;
+	background: -webkit-linear-gradient(#ff7d00, #ec0055);
+}
+
+#nav li a.selected {
+	background: -webkit-linear-gradient(#ff7d00, #ec0055);
+	color: whitesmoke;
+}
+
+#nav li a:hover {
+	background: -webkit-linear-gradient(#ff7d00, #ec0055);
+	color: whitesmoke;
+	box-shadow: 3px 3px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#nav li a {
+	position: relative;
+	text-align: center;
+	left:3px;
+	background-color: rgba(255,255,255,0.7);
+	padding: 15px;
+	margin: 0;
+	border-radius: 500px;
+}
+
+
+/*************sider bar links**************/
+
+#sidebar {
+	height: 100%;
+	width: 180px;
+	overflow: hidden;
+	padding-top:0px;
+	float: left;
+	display: block;
+}
+
+#sidebar li {
+	list-style: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	padding: 0.5px;
+	position: relative;
+	text-align: center;
+	line-height: 0.5px;
+	margin: 3px -12px 0px 0px;
+	border-radius: 15px;
+	background-color:rgba(143,208,202,0.50);
+	color: #064140;
+	letter-spacing: 1px;
+}
+
+.sidebar-button a:visited {
+	color: #064140;
+}
+
+.sidebar-button a {
+	position: relative;
+	text-align: left;
+	display: block; 
+	padding-left: 22px;
+}
+
+.sidebar-button a:hover{
+	color: #ffffff;
+	border: 0.5px solid #dadada;
+	background : -webkit-linear-gradient(20deg, #dfe54f, #15b2d3);
+	box-shadow: 0px 0px 4px gray;
+	border-radius: 15px;
+}
+
+.selected-button li {
+	background : -webkit-linear-gradient(20deg, #dfe54f, #15b2d3);	
+}
+
+.selected-button a {
+	color:#ffffff;
+}
+
+.selected-button a:visited {
+	color:#ffffff;
+}
+
+.selected-button a:link {
+	color:#ffffff;
+}
+
+.sidebar-button a:link {
+	text-decoration-line: none;
+	color: #064140;
+}
+
+
+/*************code div**************/
+
+.notes-header {
+	margin-top:50px;
+	padding-buttom:50px;
+	margin-left: 7px;
+	letter-spacing: 1.2px;
+	text-align: left;
+	line-height: 0px;
+	line-height: 25px;
+}
+
+.notes-subheader {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 23px;
+	color:#15b2d3;
+}
+
+.code-title {
+/*	background-color:rgba(143,208,202,1);*/
+	background-color:rgba(6,65,64,0.9);
+	border-top-left-radius: 28px;
+	border-top-right-radius: 28px;
+	padding: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	color:#ffffff;
+	text-align: center;
+	letter-spacing: 0.5px;
+	height: 100%;
+}
+
+.content {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 17px;
+	color:rgba(40,40,40,0.70);
+    text-align: left;
+	letter-spacing: 1px;
+	line-height: 25px;
+	margin:0px 15px 50px 15px; 
+	background:#ffffff;
+	border-radius: 10px;
+	padding: 40px;
+	z-index: 1000;
+	position: relative;	
+	-webkit-box-shadow: 0px 0px 4px #C68642;
+       -moz-box-shadow: 0px 0px 4px #C68642;
+            box-shadow: 0px 0px 4px  #C68642;
+}
+
+.content li{
+   list-style: disc;
+}
+
+.whiteSpace {
+	margin-top: 60px;
+	position: relative;
+}
+
+h5 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	color:rgba(40,40,40,0.70);
+    text-align: left;
+	letter-spacing: 0.3px;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+
+h6 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 23px;
+	color: #C68642;
+	margin-left:5px;
+	background-color:rgba(198,134,66,0.10);
+	padding:8px;
+	border-radius: 10px;
+}
+
+
+
+
+h2 span {
+	position: relative;
+	top:10px;
+	z-index: 0;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	background-color:#C68642;
+	padding: 15px 15px 20px 15px;
+	margin-left: 35px;
+	margin-top: 35px;
+		-webkit-box-shadow: 0px 0px 4px #C68642;
+       -moz-box-shadow: 0px 0px 4px #C68642;
+            box-shadow: 0px 0px 4px  #C68642;
+
+	font-size: 18px;
+	font-family: 'Source Sans Pro', sans-serif;
+/*	color:#F0F0F0;*/
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+
+.keypoints li, p{
+	text-aligh: left;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	color:#000000;
+	letter-spacing: 0.5px;
+	line-height: 25px;
+	font-weight: 400;
+}
+
+.code {
+	position: relative;
+	background:#ffffff;
+	height: 100%;
+	overflow-wrap: break-word;
+	width: 550px;
+	margin: 25px 15px 65px 15px;
+	border-radius: 30px;
+	border: 0.2px solid #dadada;
+	-webkit-box-shadow: 0px 0px 4px #064140;
+       -moz-box-shadow: 0px 0px 4px #064140;
+            box-shadow: 0px 0px 4px #064140;
+}
+
+
+
+.test {
+	text-aligh: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	margin: 0px;
+}
+
+.code-test-button {
+	background-color: #dfe54f;
+	box-shadow: 0px 0px 8px lightgray;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: lighter;
+	letter-spacing: 0.5px;
+	font-size: 15px;
+	color:#131313;
+	padding: 10px 18px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+.test-result {
+	font-family: 'Source Sans Pro', sans-serif;
+	background:rgba(143,208,202,0.20);
+	margin: 15px 25px 40px 25px;
+	padding: 40px 30px;
+	color: #064140;
+	text-align: center;
+	font-size: 17px;
+	letter-spacing: 0.4px;
+	font-weight: lighter;
+	
+}
+
+
+/*************images**************/
+
+#cool {
+	text-align: center;
+	width: auto;
+	margin-left: 80px;
+	}
+#study-1 {
+	display: inline;
+	opacity: 0.5; 
+	z-index: 1; 
+	position:fixed; 
+	left:850px;
+	right: 200px;
+	top:500px;
+}
+#footer {
+	clear: both;
+}
+
+h3 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 23px;
+	color: #C68642;
+}
+
+
+
+.highlight {
+	padding: 0px;
+	margin: 0px;
+    font-size: 14px;
+	color:#06A880;
+	font-family: 'Source Code Pro', monospace;
+}
+
+
+.code-comments {
+	font-family: 'Source Code Pro', monospace;
+	color: gray;
+	font-size: 13px;
+	margin-left:30px;
+	margin-right:40px;
+	margin-bottom: 45px;
+	line-height: 23px;
+}
+
+.code-block {
+	line-height: 20px;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 11px;
+	padding: 10px 25px;
+	color:black;
+	word-wrap: break-word;
+}
+
+
+/************* hotel test restules style**************/
+.bg-img {
+	background-image: url("images/hobart.jpg");	
+	opacity: 0.8;
+	box-shadow: 3px 6px 7px grey;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.bg-logo {
+	padding-top:22px;
+}
+
+.bg-container {
+	margin: 30px;
+	background-color: #ffffff;
+	opacity: 0.9;
+	border: 3px double #31373f;
+	display: flex;
+	flex-direction: column;
+	width:70%;
+    justify-content: center;
+	padding: 30px 30px;
+	font-kerning: 10px;
+	flex-wrap: wrap;
+}
+
+#cost {
+	background-color: #F84C53;
+	color:#ffffff;
+	padding: 0.5em 0.1em;
+	margin: 0px 90px;
+}
+
+.test-text {
+	padding: 0.3em 0.1em;
+	color:#171717;
+}
+
+#message {
+	background-color: black;
+	order: 3;
+	color: antiquewhite;
+	border-radius: 5px;
+	padding: 5px 20px;
+}
+
+.true, .false {
+    background: url("images/check-cross.png");
+	background-repeat: no-repeat;
+ 	float: right;
+    height: 28px;
+    width: 28px;
+	margin-right:50px;
+}
+
+
+.false {
+    background-position: 0 -28px;
+}
+
+.action {
+	padding: 5px 10px;
+	background-color: #F84C53;
+	color:#ffffff;
+	float: right;
+	display: block;
+	margin-top: 10px;
+	margin-left: 190px;
+}
+
+table {
+	margin-top: 15px;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: left;
+}
+
+.tableStyle {
+	margin: 0px 0px 50px 0px;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: left;
+	width: 100%;
+	color: black;
+	letter-spacing: 0.5px;
+	line-height: 20px;
+}
+
+.tableStyle td{
+	padding: 8px 5px;
+	border-bottom: 1px solid darkgray;
+}
+
+.tableStyle th {
+	text-transform: uppercase;
+	font-size: 17px;
+	border-bottom: 1px solid darkgray;
+	padding: 8px 5px;
+}
+
+
+
+
+
+/************* hotel object test restules **************/
+
+.hotel-bg-img {
+	background-image: url("images/travelworthy-backdrop.jpg");	
+	box-shadow: 3px 6px 7px grey;
+	background-repeat: no-repeat;
+	width: 440px;
+    height: 220px;
+	-webkit-background-size: cover;
+  	background-size: cover;
+	padding: 0px;
+}
+
+#hotel-bg-img {
+	height: 380px;
+}
+
+.hotel-bg-container {
+	background-color: #1e1b1e;
+	width: 180px;
+    height: 220px;
+	float: right;
+	padding: 0 15px;
+	text-align: center;
+}
+
+#hotel-bg-container{
+	height: 380px;
+}
+
+#hotel-test-text, 
+#hotel-test-text-2,
+#hotel-test-text-3,
+#latestHotelOffer{
+	margin: 18px 5px 0px 5px;
+	letter-spacing: 1px;
+	color:#adffda;
+	font-size: 18px;
+}
+
+.msg-1{
+	margin: 18px 5px 0px 5px;
+	letter-spacing: 1px;
+	color:#adffda;
+	font-size: 18px;
+}
+
+#hotelName,
+#hotelName-2,
+#hotelName-3{
+	text-transform: uppercase;
+    font-size: 22px;
+	letter-spacing: 2px;
+	border-top: 1px solid #fff;
+  	border-bottom: 1px solid #fff; 
+	margin:8px 8px 8px 8px;
+	padding: 7px 0px;
+	color: white;
+}
+
+#specialRate {
+	font-size: 85px;
+	color:#ffb87a;
+	margin: 0px 0px 5px 0px;
+	display: block;
+	clear: both;
+}
+
+#rooms {
+	font-size: 65px;
+	color:#ffb87a;
+	padding: 0px;
+}
+
+#text-rooms-left,
+#msg-1-1, #msg-2-2, #msg-3-3,
+#num1, #num2, #num3{
+	font-size:13px;
+	letter-spacing: 1px;
+	margin: 0px;
+	color: white;
+}
+
+#roomRate {
+	position: relative;
+	float: left;
+	display: block;
+	text-decoration: line-through;
+	letter-spacing: 1px;
+	color: darkgray;
+	margin-left: 10px;	
+	margin-bottom: 5px;
+}
+
+#msg-2 {
+	padding: 5px 25px 0px 25px;
+	color: white;
+	line-height: 17px;
+	font-size:13px;
+}
+
+#offerEnds {
+	padding: 20px 20px 5px 20px;
+	color: #ffb87a;
+	line-height: 17px;
+	letter-spacing: 1px;
+	font-size:13px;
+	text-transform: uppercase;
+}
+
+
+
+/*************more object test restults **************/
+
+ #hotel1, #hotel2  {
+	font-size: 15px;
+	color:#FFFFFF;
+	margin: 5px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
+#g, #p {
+	color:white;
+	text-align: left;
+	padding: 0.3em 0.1em;
+	margin-left: 60px;
+}
+
+
+/**************teacher test results*******************/
+
+.teacher-container {
+	box-shadow: 3px 6px 7px grey;
+	background: #fecc6f;
+	display: block;
+	width: 390px;
+	height: 370px;
+	padding: 25px;
+}
+#teacher-container {
+	height: 480px;
+}
+
+.teacher-bullseye {
+	background-image: url("images/bullseye-logo.png");
+	width: 370px;
+    height: 55px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+		padding: 5px;
+}
+
+
+.teacher-board {
+	border: 5px double #fff;
+	display: inline;
+	font-family: 'Wellfleet', cursive;
+	font-size: 19px;
+	padding: 15px 10px;
+    width: 180px;
+    height: 85px;
+	position: relative;
+	top:55px;
+	word-wrap: break-word;
+	float:left;
+	text-align: center;
+	line-height: 30px;
+}
+
+.teacher-board-2 {
+	border: 5px double #fff;
+	display: inline;
+	font-family: 'Wellfleet', cursive;
+	font-size: 19px;
+	padding: 15px 10px;
+    width: 180px;
+    height: 300px;
+	position: relative;
+	top:55px;
+	word-wrap: break-word;
+	float:left;
+	text-align: center;
+	line-height: 30px;
+}
+
+.teacher-img {
+	background-image: url("images/teacher.png");
+	display: inline;
+	position: relative;
+	width: 180px;
+    height: 270px;
+    float: right;
+    top: 60px;
+    left: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#teacher-img-2 {
+	width: 150px;
+    height: 230px;
+	top: 210px;
+    left: 10px;
+}
+
+#userLevel, #userOperator{
+	margin: 0px;
+    width: 180px;
+    height: 40px;
+	box-shadow: 0px 0px 8px lightgray;
+	border: 1px solid lightgray;
+}
+
+
+
+/**************listking- buy groceries- test results*******************/
+
+.iPhone-bg {
+	background-image: url("images/iphone.png");
+	width: 225px;
+    height: 465px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+/*	background: lightgray;*/
+	font-family: 'Oswald', 'Futura', sans-serif;
+/*	box-shadow: 3px 6px 7px grey;*/
+	text-align: center;
+}
+
+.listking-logo {
+	background-image: url("images/kinglogo.png");
+	width: 72px;
+	height: 72px;
+}
+
+
+
