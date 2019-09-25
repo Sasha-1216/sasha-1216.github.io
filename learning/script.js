@@ -1,6 +1,6 @@
 	function showHideDiv(eleSiderbar, eleContent) {
 		var infoElementToShow = document.getElementById(eleContent);
-		var sideButtonToBeSelected = document.getElementById(eleSiderbar)
+		var sideButtonToBeSelected = document.getElementById(eleSiderbar);
 
 		var infoElements = document.getElementsByClassName('info');
 		for (let infoElement of infoElements) {
@@ -15,20 +15,39 @@
 			sideButton.className = 'sidebar-button';
 		}
 		sideButtonToBeSelected.className = 'sidebar-button selected-button';
+		
+		
+		
+		
+		 /*************************events LISTNERS *************************/
+		
+		
+		// set up event listner to call itemDone() on click
+		var el = document.getElementById('shoppingList'); // get shopping list
+		if (el.addEventListener) { // if event listners work
+			el.addEventListener('click', function (e) {
+				itemDone(e);
+			}, false);
+		} else {
+			el.attachEvent('onClick', function (e) {
+				itemDone(e);
+			});
+		}
+		
+		
+		
+		
+		setupCheckUsername();
+		setupSetUp();
+//		setUpcheckUsername2();
+		setUpSystemMaintance();
+		setupPosition();
+		setupWhichkeyPress();
+		setupMembershipForm();
 	}
 
-//function toggle() {
-//  var yes = document.getElementsByClassName ('code-test-button')
-//  var x = document.getElementsByClassName('toggle');
-//	
-//	if (yes.clicked === true) {
-//		x.style.display = 'block';
-//	} else {
-//		x.style.dispaly = 'none';
-//	}
-//}
 
-// display greetings based on time 
+
 
 	function greeting() {
 		var today = new Date(); // Create a new date object </span> 
@@ -404,6 +423,120 @@ function decisionLoopTest() {
 	el.innerHTML = msg;
 }
 	
+function buyGroceries() {
+	
+	// adding items to start and end of list
+	// get the ul elements
+	var list = document.getElementsByClassName('listking-list')[0];
+	
+	// add new item to end of list
+	var newItemLast = document.createElement('li');  //create element
+	var newTextLast = document.createTextNode('cream');  // create text node
+	newItemLast.appendChild(newTextLast); // add text node to element
+	list.appendChild(newItemLast); // add element of the list
+	
+	// add new item starts of list 
+	var newItemFirst = document.createElement('li'); // create element
+	var newTextFirst = document.createTextNode('kale');  // create text node
+	newItemFirst.appendChild(newTextFirst);   // add text node to element
+	list.insertBefore(newItemFirst, list.firstChild);  //add element of the list
+	
+	//get ul element by id
+	var ulNode = document.querySelector('#listking-list');
+	// get the list of li in the ul element
+	var listItems = ulNode.querySelectorAll('li');
+
+	// add class cool to the list of li element
+	var i;
+	for(i = 0; i < listItems.length; i++) {
+		listItems[i].className = 'cool';
+	}
+	
+	// add number of items in the list to the heading
+	var heading = document.getElementsByClassName('listking-heading')[0];
+	var totalItems = listItems.length;
+	
+	// create a span element
+	var newSpan = document.createElement('span');
+	
+	// get span style by its css id 
+	newSpan.id = 'span';
+	
+	// create textNode
+	var newText = document.createTextNode(totalItems);
+	
+	// add text node to span element
+	newSpan.appendChild(newText);	
+	
+	// add span element to the heading
+	heading.appendChild(newSpan);
+}
+
+function getTarget(e) {        // declare function
+	if (!e) {                  // if there is no event object
+		e = window.event;      // use old IE event object
+	}
+	return e.target || e.srcElement; // get the target of the event
+}
+
+function itemDone(e) {
+	
+	 var target;
+    target = getTarget(e);
+	
+	var elListItem, elList;
+    if ( target.nodeName.toLowerCase() == "a" ) {  // If user clicked on an a element
+        elListItem = target.parentNode;              // Get its li element
+        elList = elListItem.parentNode;              // Get the ul element
+        elList.removeChild(elListItem);              // Remove list item from list
+    }
+    if ( target.nodeName.toLowerCase() == "em" ) { // If the user clicked on an em element
+        elListItem = target.parentNode.parentNode;   // Get its li element
+        elList = elListItem.parentNode;              // Get the ul element
+        elList.removeChild(elListItem);              // Remove list item from list
+    }
+
+    if (e.preventDefault) {
+        e.preventDefault();
+    } else {
+        e.returnValue = false;
+    }
+}
+
+
+
+
+function checkUsername() {                             // Declare function
+  var elMsg = document.getElementById('feedback');     // Get feedback element
+  if (this.value.length < 5) {                         // If username too short
+    elMsg.textContent = 'Username must be 5 characters or more'; // Set msg
+  } else {                                             // Otherwise
+    elMsg.textContent = '';                            // Clear msg
+  }
+}
+
+function setupCheckUsername() {
+	var elUsername = document.getElementById('username'); // Get username input
+	// When it loses focus call checkUsername()
+	if (elUsername) {
+		elUsername.addEventListener('blur', checkUsername, false);
+	}
+}
+
+
+
+
+
+
+function setUp() {            // decalre function
+	var textInput;            // create variable
+	textInput = document.getElementById('username1');  // get username input
+	textInput.focus();  //give username focus
+}
+
+function setupSetUp(){
+	window.addEventListener('load', setUp, false); // when page loaded call setup()
+}
 
 
 
@@ -411,6 +544,180 @@ function decisionLoopTest() {
 
 
 
+
+
+
+  // element to hold message 
+
+
+	
+	
+	function setUpSystemMaintance(){
+	// create HTML for the mssage
+//	<div> id = system-msg 
+//	<div> header + a 
+//	<div> 
+	var msg = '<div><a id=\"close\" href="#">close X </a><div>';
+	msg += '<div><h2>System Maintenance</h2>';
+	msg += 'Our servers are being updated between 3 and 4 a.m. ';
+	msg += 'During this time, there may be minor discruptions to service.</div>';
+	
+	var elNote = document.createElement('div');
+	elNote.setAttribute('id', 'system-msg');
+	elNote.id = 'system-msg';
+	elNote.innerHTML = msg;
+	var parent = document.getElementById('system-msg-container');
+	parent.appendChild(elNote);
+	
+	function dismissNote() {
+	 parent.removeChild(elNote);
+	}
+		
+//	function locateContainer() {
+//		var fixed = document.getElementById('locate-container');
+//
+//		fixed.addEventListener('touchmove', function(e) {
+//
+//        e.preventDefault();
+//
+//		}, false);
+//	}
+	
+		
+	var elClose = document.getElementById('close');
+	elClose.addEventListener('click', function(e) {
+		dismissNote(e);
+		setUpcheckUsername2(e);
+//		locateContainer(e);
+	}, false);
+		
+		
+		
+		
+		function setUpcheckUsername2() {
+
+		function checkUsername2() {             // declare function
+		var username = el.value;               // store username in a variable
+		if (username.length < 5 ) {            // if username < 5 characters
+			elMsg.className = 'warning';       // change class on message
+			elMsg.textContent = 'Not long enough, yet...';     // update message
+		} else {
+			elMsg.textContent = '';                           // clear the message
+		}
+	}
+
+		function tipUsername () {                 // declare function
+		elMsg.className = 'tip';                  // change class for message
+		elMsg.innerHTML = 'Username must be at least 5 characters';  // add message
+	}
+
+		var el = document.getElementById('username2');      // username input
+		var elMsg = document.getElementById('feedback2');   // element to hold the message
+
+		// when the username input gains / lose focus call function above: 
+		el.addEventListener('focus', tipUsername, false);      // focus call tipUsername
+		el.addEventListener('blur', checkUsername2, false);   // blur call checkusername
+		}
+		
+	}
+
+
+
+
+
+
+function setupPosition(){
+
+var sx = document.getElementById('sx');        // Element to hold screenX
+var sy = document.getElementById('sy');        // Element to hold screenY
+var px = document.getElementById('px');        // Element to hold pageX
+var py = document.getElementById('py');        // Element to hold pageY
+var cx = document.getElementById('cx');        // Element to hold clientX
+var cy = document.getElementById('cy');        // Element to hold clientY
+
+	function showPosition(event) {                 // Declare function
+	  sx.value = event.screenX;                    // Update element with screenX
+	  sy.value = event.screenY;                    // Update element with screenY
+	  px.value = event.pageX;                      // Update element with pageX
+	  py.value = event.pageY;                      // Update element with pageY
+	  cx.value = event.clientX;                    // Update element with clientX
+	  cy.value = event.clientY;                    // Update element with clientY
+	}
+
+var el = document.getElementById('show-position');      // Get body Element
+el.addEventListener('mousemove', function(e) {
+	showPosition(e);
+	
+},false); // Move updates position
+
+
+}
+
+function setupWhichkeyPress() {
+	var el;    // declare variable
+	
+	function charCount(e){
+		var textEntered, charDisplay, counter, lastKey;   // declare variables
+		textEntered = document.getElementById('user-message').value;  // user text
+		charDisplay = document.getElementById('char-counter');  // counter element
+		counter = (180- (textEntered.length));      	// num of chars left
+		charDisplay.textContent = counter + ' characters';     			 // show chars left
+		
+		lastKey = document.getElementById('last-key-ASCII');      // get lst key used
+		lastKey.textContent = 'Last key in ASCII code: ' + e.keyCode;  // create msg
+	}
+	
+	el = document.getElementById('user-message');    // get msg element
+	el.addEventListener('keypress', charCount, false);  // Keypress event
+}
+
+
+
+
+// <form method="post" action="http://www.example.org/register" id="formSignup" >
+//                  <label for="package" class="selectbox"> Select a package: </label>
+//       				 <select id="package">
+//          					<option value="annual">1 year ($50)</option>
+//          					<option value="monthly">1 month ($5)</option>
+//        				</select>
+//        		<div id="packageHint" class="tip"></div>
+//				<input type="checkbox" id="terms" />
+//       		    <label for="terms" class="checkbox"> Check to agree to terms &amp; conditions</label>
+//                <div id="termsHint" class="warning"></div>
+//               <input type="submit" value="next" />
+//        </form>
+
+function setupMembershipForm() {
+	
+	// declare variables
+	var elForm, elSelectedPackage, elPackageHint, elTerms, elTermsHint; 
+	// store elements
+    elForm = document.getElementById('formSignup');
+	elSelectedPackage = document.getElementById('package');
+	elPackageHint = document.getElementById('packageHint');
+	elTerms = document.getElementById('terms');
+	elTermsHint = document.getElementById('termsHint');
+	
+	function packageHint() {
+		var pack = this.options[this.selectedIndex].value;
+	    if(pack === 'monthly'){
+			elPackageHint.innerHTML = 'Save $10 if you pay for 1 year!';  // show this msg
+		} else {
+			elPackageHint.innerHTML = 'Wise choice!';
+		}
+	}
+	
+	function checkTerms(event) {
+		if(!elTerms.checked) {
+		  elTermsHint.innerHTML = 'You must agree to the terms.'; // show this msg
+		  event.preventDefault(); // don't submit form
+		}
+	}
+	
+	// create event listners: sumbmit calls checkTerms(), packageHint()
+	elForm.addEventListener('submit', checkTerms, false);
+	elSelectedPackage.addEventListener('change', packageHint, false);
+}
 
 
 

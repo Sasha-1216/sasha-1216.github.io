@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Love+Ya+Like+A+Sister|Schoolbell|Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Wellfleet&display=swap" rel="stylesheet">
-<title>JavaScript</title>
+<title>PHP</title>
 </head>
 
 <body>
@@ -24,9 +24,9 @@
         <li><a href="learning.html" ><img src="images/home.png" width="50px" height="50px" alt="home-icon"></a></li>
         <li><a href="html.html" >HTML</a></li>
         <li><a href="css.html" >CSS</a></li>
-        <li><a href="javascript.html" class="selected" >JavaScript</a></li>
+        <li><a href="javascript.html" >JavaScript</a></li>
         <li><a href="jquery.html" >jQuery</a></li>
-        <li><a href="learning-php.php" >PHP</a></li>
+        <li><a href="learning-PHP.php" class="selected"  >PHP</a></li>
       </ul>
     </div>
     <hr>
@@ -140,25 +140,8 @@
         <div class="code">
           <div class = "code-title"> GREETING </div>
           <p class="code-block">
-            var today  = new Date();     // Create a new date object<br>
- 
-              var hourNow = today.getHours();     // Find the current hour<br>
- 
-              var greeting; <br>
-              
-              if (hourNow > 18) { <br>
-              greeting = 'Good eveing';<br>
-              } else if (hourNow > 12) {<br>
-              greeting = 'Good afternoon'; <br>
-              } else if (hourNow > 0) {<br>
-              greeting = 'Good morning'; <br>
-              } else {<br>
-              greeting = 'Welcome';<br>
- 
-              }<br>
- 
-              
-              document.getElementById("greeting").innerHTML = greeting; </p>
+<?php 
+			  ?>
           <div class="test">
             <button class="code-test-button" onClick = "greeting();">Try This Code</button>
           </div>

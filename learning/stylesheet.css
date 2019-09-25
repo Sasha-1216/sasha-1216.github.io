@@ -129,7 +129,7 @@ body{
 
 #sidebar {
 	height: 100%;
-	width: 180px;
+	width: 195px;
 	overflow: hidden;
 	padding-top:0px;
 	float: left;
@@ -211,6 +211,16 @@ body{
 	color:#15b2d3;
 }
 
+.code-title::before {
+	content: "- example -";
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	font-size: 26px;
+	letter-spacing: 5px;
+	color: bisque;
+}
+
 .code-title {
 /*	background-color:rgba(143,208,202,1);*/
 	background-color:rgba(6,65,64,0.9);
@@ -255,8 +265,8 @@ body{
 
 h5 {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 16px;
-	color:rgba(40,40,40,0.70);
+	font-size: 17px;
+	color:rgba(40,40,40,0.90);
     text-align: left;
 	letter-spacing: 0.3px;
 	font-weight: 400;
@@ -310,18 +320,58 @@ h2 span {
 	font-weight: 400;
 }
 
+
+
 .code {
+	z-index: 1000;
 	position: relative;
 	background:#ffffff;
 	height: 100%;
 	overflow-wrap: break-word;
-	width: 550px;
+	width: auto;
 	margin: 25px 15px 65px 15px;
 	border-radius: 30px;
 	border: 0.2px solid #dadada;
 	-webkit-box-shadow: 0px 0px 4px #064140;
        -moz-box-shadow: 0px 0px 4px #064140;
             box-shadow: 0px 0px 4px #064140;
+}
+
+
+.highlight {
+	padding: 0px;
+	margin: 0px;
+    font-size: 14px;
+	color:#06A880;
+	font-family: 'Source Code Pro', monospace;
+}
+b {
+	color: #ec0055;
+}
+
+
+.code-comments {
+	font-family: 'Source Code Pro', monospace;
+	color: gray;
+	font-size: 13px;
+	margin-left:30px;
+	margin-right:40px;
+	margin-bottom: 45px;
+	line-height: 23px;
+}
+
+.code-block {
+	line-height: 25px;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 12px;
+/*	padding: 5px 15px;*/
+	margin: auto;
+	color: black;
+/*	color:#06A880;*/
+/*	word-wrap: break-word;*/
+}
+.code-block::before {
+	
 }
 
 
@@ -356,8 +406,7 @@ h2 span {
 	text-align: center;
 	font-size: 17px;
 	letter-spacing: 0.4px;
-	font-weight: lighter;
-	
+	font-weight: lighter;	
 }
 
 
@@ -389,33 +438,6 @@ h3 {
 
 
 
-.highlight {
-	padding: 0px;
-	margin: 0px;
-    font-size: 14px;
-	color:#06A880;
-	font-family: 'Source Code Pro', monospace;
-}
-
-
-.code-comments {
-	font-family: 'Source Code Pro', monospace;
-	color: gray;
-	font-size: 13px;
-	margin-left:30px;
-	margin-right:40px;
-	margin-bottom: 45px;
-	line-height: 23px;
-}
-
-.code-block {
-	line-height: 20px;
-	font-family: 'Source Code Pro', monospace;
-	font-size: 11px;
-	padding: 10px 25px;
-	color:black;
-	word-wrap: break-word;
-}
 
 
 /************* hotel test restules style**************/
@@ -678,7 +700,7 @@ table {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-		padding: 5px;
+	padding: 5px;
 }
 
 
@@ -750,26 +772,269 @@ table {
 
 /**************listking- buy groceries- test results*******************/
 
-.iPhone-bg {
-	background-image: url("images/iphone.png");
-	width: 225px;
-    height: 465px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-/*	background: lightgray;*/
+.listking-container {
+	width: 350px;
+    height: 480px;
+	background: #403c3b;
 	font-family: 'Oswald', 'Futura', sans-serif;
-/*	box-shadow: 3px 6px 7px grey;*/
-	text-align: center;
+	box-shadow: 3px 6px 7px grey;
+	color:#fff;
+	margin: auto;
+	padding: 25px 0px 25px 0px;
 }
 
 .listking-logo {
 	background-image: url("images/kinglogo.png");
 	width: 72px;
 	height: 72px;
+	padding: 15px auto 25px auto;
+	margin: auto;
+}
+
+.listking-heading {
+	font-size: 24px;
+	padding: 30px 0px 10px 0px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+
+}
+
+#span {
+	border-radius: 50%;
+	background-color: #fff;
+	color: #000;
+	font-size: 12px;
+	text-align: center;
+ 	display: inline-block;
+ 	position: relative;
+  	top: -5px;
+  	height: 18px;
+  	width: 18px;
+  	padding: 4px;
+  	margin-left: 5px;
+}
+
+.listking-list{
+	margin: auto;
+	width:350px;
+	padding: 0px;
+	text-align: left;
+
+}
+
+.listking-list li {	
+	font-size: 19px;
+	letter-spacing: .07em;
+	list-style-type: none;
+	height: 50px;
+	padding-left: 1em;
+	padding-top: 10px;
+	}
+
+.hot {
+	color: #fff;
+	border-top: 1px solid #fe9772;
+	border-bottom: 1px solid #9f593f;
+	text-shadow: 2px 2px 1px #9f593f;
+	background-color: #ec8b68;
+}
+
+
+.cool {
+	background-color: #6cc0ac;
+	color: #fff ;
+	text-shadow: 2px 2px 1px #3b6a5e;
+	border-top: 1px solid #7ee0c9 ;
+	border-bottom: 1px solid #3b6a5e ;
+}
+
+.complete {
+  	background-color: #999;
+	color: #fff;
+	background-image: url("images/icon-trash.png");
+	background-position: right, center;
+	background-repeat: no-repeat;
+	border-top: 1px solid #666;
+	text-shadow: 2px 2px 1px #333;
+}
+
+.complete a {
+	display:block;
+/*  color: -webkit-any-link ;*/
+    color: #fff;
+    cursor: pointer;
+	text-decoration-line: none;
+}
+.complete a {
+  background-image: none;
+}
+
+
+/********************** event listner  ******************/ 
+
+input[type='text'], input[type='password'], textarea {
+  background-color: #999;
+  color: #666;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  font-size: 24px;
+  width: 80%;
+/*  margin: 5px 15;*/
+  padding: 4px 6px;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+input[type='text']:focus, input[type='password']:focus, textarea:focus {
+  border: 1px solid #fff;
+  background-color: #fff;
+  outline: none;}
+
+label {
+  color: #fff;
+  display: block;
+  margin: 10px 0 10px 0;
+  font-size: 20px;
+	letter-spacing: 1px;
+}
+
+
+input[type='submit'], a.add {
+  background-color: #cb6868;
+  color: #f3dad1;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin: 28px;
+  float: right;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;}
+
+input[type='submit']:hover, a.add:hover {
+  background-color: #d75359;
+  color: #f3dad1;
+  cursor: pointer;
+  box-shadow: none;
+  position: relative;
+  top: 1px;}
+
+textarea {
+  width: 96%;
+  height: 5em;
+  line-height: 1.4em;}
+
+select, option {
+  font-size: 16px;}
+
+
+#feedback, #termsHint, feedback1, #feedback2, #packageHint {
+  color: #fff;
+  background-image: url('images/warning.png');
+  background-repeat: no-repeat;
+  background-position: 43px 9px;
+  padding: 2px 0 0 15px;
+}
+
+#feedback.warning {background-image: url('images/warning.png');}
+#feedback2.warning {background-image: url('images/warning.png');}
+#feedback2.tip {background-image: url('images/tip.png');  }
+
+#packageHint.tip { 
+	background-image: url('images/hint.png');
+    padding: 0px;
+}
+
+#package {
+	
+}
+
+
+#terms {
+  margin-top: 30px;}
+
+.selectbox {
+  display: inline;
+  font-size: 23px;}
+
+.checkbox {
+  display: inline;
+  font-size: 16px;}
+/* Click event example - note style */
+
+#system-msg, display-position{
+  font-family: 'Oswald', 'Futura', sans-serif;
+  color: #fff;
+  background-color: #000;
+  opacity: 0.9;
+  box-shadow: -3px 3px 6px #000;
+  padding: 1em 1em 2em 1em;
+  text-align: center;
+/*  margin: 30px;*/
+/*  border: 1px solid #d7666b;*/
+  z-index: 1000; 
+    width: 317px;
+    height: 480px;
+    position: relative;
+    top: -370px;}
+
+#close {
+   position: relative;
+	left: 200px;
+  margin: auto;
+}
+
+#system-msg h2 {
+text-transform: uppercase;
+  font-size: 30px;
+  color: #d7666b;
+  padding-top: 50px;
+  padding-bottom: 30px;}
+
+#system-msg a {
+  text-decoration: none;
+
+  color: #fff;}
+
+
+#stats {
+  background-color: #6cc0ac;
+  color: #ffffff; 
+  position: relative; 
+  top: 0; 
+  left: 0; 
+  padding: 25px; 
+  margin: AUTO;
+  width: 476;
+}
+
+#stats input[type="text"] {
+  width: 50px;
+  height: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-color: #fff;}
+
+#user-message {
+	margin:auto;
+	text-align: left;
+	height: 150px;
+	line-height: 15px;
+	width:280px;
+}
+
+#char-counter {
+	font-size: 30px;
+	padding: 5px auto 5px 0px;
+	position: relative;
+	text-align: left;
+	margin: 30px 30px 5px 30px;
+	font-weight: 500;
+}
+
+#last-key-ASCII  {
+	text-align: left;
+	margin: 0px 30px 5px 30px;
 }
 
 
