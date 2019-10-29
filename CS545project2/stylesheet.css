@@ -1,0 +1,677 @@
+/*
+Shasha, Wang
+CS545_00
+Assignment #2
+Fall 2019
+*/
+
+
+/* ----Generic style---- */
+
+h1, h2, h3, h4, h5, h6, form {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.1rem;
+}
+h4, h5, h6 {
+    line-height: 0.2rem;
+    margin-top: 2rem;
+}
+p, a, li {
+    font-family: 'Lato', sans-serif;
+    list-style-type: none;
+}
+
+
+
+/* ----Generic style---- */
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    background-color: #acbf37;  
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: inline-block;
+    letter-spacing: 1px;
+	border: 1px solid #acbf38;  
+
+}
+a:hover, .newsletter a:hover{
+    background-color: #fff;
+    color: #acbf37;
+
+}
+.wrapper {
+    background-color: #fff;
+}
+
+
+
+/* ----style for the Header---- */
+
+header {
+    background-color: #000;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.5rem;
+    overflow: hidden;
+}
+header img, header h1 {
+    display: inline;
+    float: left;
+    padding: 0.7rem;
+}
+.logo {
+    height: 2.2rem;
+}
+header a:hover, header a {
+    background-color: #000;
+    border: none;
+    color: #fff;
+}
+
+
+/* ----style for the Nav---- */
+
+nav {
+    height: auto;
+    background-color: #acbf37;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    font-family: inherit;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+nav li a {
+    padding: 8px 16px;
+    width: 93%;
+    color: #fff;
+    border: none;
+	background-color: #acbf37;
+}
+nav li a:hover {
+    color: #57833b;
+    background-color: #acbf37;
+}
+
+
+/* ----style for the Nav selected---- */
+
+.nav-selected {
+    color: #57833b;
+}
+
+
+/* ----generic hero image with caption-----*/
+
+.hero {
+    background-size: cover;
+    padding: 4rem 2rem;
+    margin: 0;
+    height: 30rem;
+    color: #fff;
+    background-repeat: no-repeat;
+    text-align: center; /* center for mobile style*/
+}
+.hero > h1 {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+.hero > article > p {
+    font-size: 1rem;
+    font-weight: 200;
+}
+.hero > article > a, .full-width-1col > .full-width-1col-bg  > .full-width-1col-caption > a {
+    padding: 1rem;
+    margin-top: .75rem;
+}
+
+
+/* -----index page hero images----- */
+
+#index-hero {
+    background: url('img/index-1.jpg') center;
+    height: auto;
+    display: block;
+}
+
+/*I really like this gridiant text effect, however 
+there is a warning of unknown vendor extension*/
+#index-hero > h1 {
+    background: -webkit-linear-gradient(#acbf37, #57833b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+}
+#index-hero > h1 > span, #contact-hero > h1 > span {
+    font-size: 2rem;
+}
+#index-hero > article {
+    text-align: center;
+}
+
+/* -----exibition page hero images----- */
+
+#exibition-hero {
+    background: url('img/1_gem.jpeg') center;
+}
+
+
+/* -----events page hero images----- */
+#events-hero {
+    background: url('img/events-4.jpg') center;
+    height: auto;
+}
+
+
+/* -----science page hero images----- */
+#science-hero {
+    background: url('img/science-2.jpg') center;
+}
+
+
+/* -----donate page hero images----- */
+#donate-hero {
+    background: url('img/donate-1.jpg') center;
+    height: auto;
+}
+#donate-hero > h1 {
+    padding: 3rem 0.2rem;
+    text-align: center;
+    margin: 0 4rem;
+    opacity: 0.9;
+}
+
+/* -----about page hero images----- */
+
+#about-hero {
+    background: url('img/about-2.jpg') center;
+}
+
+/* -----contact page hero images----- */
+/*-----------------------------------*/
+#contact-hero {
+    background: url('img/contact-2.jpg') center;
+	height: auto;
+}
+
+
+/*-----generic multi column layout----*/
+
+.multi-column {
+    text-align: center; /* center for mobile style*/
+}
+.multi-column > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    padding: 0rem;
+}
+.multi-column > ul > li {
+    margin: 0rem;
+    background-color: #fff;
+}
+.multi-column > ul > li > figure {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.multi-column > ul > li > figure > img {
+    width: 100%;
+}
+.multi-column > ul > li > h3{
+    color: #000;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0rem 2rem 0rem 0rem;
+}
+.multi-column > ul > li > span {
+    font-size: 0.9rem;
+    color: #57833b;
+    opacity: 0.8;
+}
+.multi-column > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #45351a;
+}
+.multi-column > ul > li > a {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+.divider {
+    background-color: #acbf37;
+    padding: 2px 0px;
+}
+
+
+
+/*-----style for 1 column layout---*/
+
+#columns_1 > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: grid;
+    grid-gap: 0rem;
+    grid-template-columns: 1fr;
+}
+#columns_1 > ul > li {
+    padding: 2rem;
+}
+
+
+
+
+
+/*-----style for 2 column layout-----*/
+
+#columns_2_text > ul {
+    display: grid;
+    margin-top: 0;
+    grid-gap: 0rem;
+    background-color: #fff;
+    grid-template-columns: 1fr auto;/*	repeat(auto-fit, minmax(450px, 1fr))*/
+}
+#columns_2_text > ul > li  {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-top: 2px solid #acbf37;
+}
+
+#columns_2_text_event > ul > li {
+	padding: 1.5rem;
+    background-color: #fff;
+}
+
+#columns_2_text_event > ul {
+    display: grid;
+    margin-top: 0;
+    grid-gap: 0rem;
+    background-color: #fff;
+	align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr))
+}
+
+#columns_2_text_event > ul > li > img {
+	width:100% ;
+}
+
+
+#columns_2_text > ul > li > p {
+    text-align: left;
+}
+#columns_2_text > ul > li > h1 {
+    text-align: center;
+    color: #57833b;
+}
+#columns_2_text > ul > li > img, #columns_2_text_event > ul > li > img {
+    border: 6px solid #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+/*-----style for 3 column layout-----*/
+
+#columns_3_text {
+    padding: 0;
+}
+#columns_3_text > ul {
+    margin-bottom: 2rem;
+}
+#columns_3_text > ul > li {
+    padding-bottom: 3rem;
+}
+#columns_3_text > ul > li > h3, #columns_1 > ul > li > h3 {
+    text-transform: capitalize;
+}
+#columns_3_text > ul > li > p, #columns_3_text_bg > ul > li > p {
+    padding: 0rem 2rem 2rem 2rem;
+}
+#columns_3_text > ul > li > h3, #columns_3_text_bg > ul > li > h3 {
+    padding: 3rem 0rem 0rem 0rem;
+}
+
+
+
+/*-----style for 3 column layout text with background color---*/
+
+#columns_3_text_bg > ul {
+    display: grid;
+    grid-gap: 0rem;
+    margin-top: 0;
+}
+#columns_3_text_bg {
+    text-align: center;
+    margin-top: 0;
+}
+#columns_3_text_bg > ul > li > p {
+    font-size: 1.3rem;
+    padding: 60px;
+    color: #fff;
+}
+#columns_3_text_bg > ul > .bg1, #columns_2_text > ul > .bg {
+    background-color: #9cc6d9;
+}
+#columns_3_text_bg > ul > .bg2, #columns_2_text > ul > .bg {
+    background-color: #00b2cb;
+}
+#columns_3_text_bg > ul > .bg3, #columns_2_text > ul > .bg {
+    background-color: #7dcbb3;
+}
+#columns_3_text_bg > ul > .bg4, #columns_2_text > ul > .bg {
+    background-color: #e5858f;
+}
+#columns_3_text_bg > ul > .bg5 {
+    background-color: #f7924f;
+}
+#columns_3_text_bg > ul > .bg6 {
+    background-color: #ecdb86;
+}
+
+/*-----subheading style for 3 column layout text with background color---*/
+
+.subheading-container {
+    background-color: #2d2d2f;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+
+/*-----generic style for form  ---*/
+
+.form-container {
+    padding: 40px 20px;
+    margin: auto;
+    width: auto;
+    opacity: 0.8;
+	background-color: #fff;
+    color: #000;
+	border: 6px solid #fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+/* --- style for full width 1 column layout image with caption---- */
+
+.full-width-1col > .full-width-1col-bg > .full-width-1col-caption {
+    background: linear-gradient(to left, transparent, black);
+    overflow: hidden;
+    height: 35rem;
+    text-align: center;
+    margin: 0rem;
+    padding: 0rem 3rem;
+    width: 24rem;
+    color: #fff;
+}
+.full-width-1col > .full-width-1col-bg  {
+    background-size: cover;
+    height: 35rem;
+    text-align: center;
+}
+
+
+/*full-width-exibition page background image with caption*/
+#full-width-exibition > .full-width-1col-bg {
+    background: url('img/5_citizenScience.jpg') center;
+}
+
+/*full-width-science page background image with caption*/
+#full-width-science > .full-width-1col-bg {
+    background: url('img/science-6.jpg') center;
+}
+.full-width-1col-caption > h2 {
+    font-size: 2.5rem;
+    padding: 0;
+}
+
+
+
+
+/*--- generic footer style--- */
+
+footer {
+    border-top: 5px solid #acbf37;
+}
+footer ul {
+    padding: 0;
+}
+
+/*--- style for footer elements--- */
+
+.footer-container {
+    background-color: #2d2d2f;
+    margin: auto;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    padding: 2rem 2rem;
+}
+.footer-container p {
+    opacity: 0.6;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+.footer-container h4 {
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+
+
+/* footer newsletter input  */
+
+input[type=text] {
+    width: 90%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: 1px solid #acbf37;
+}
+
+
+/* footer nav and links   */
+
+.site-map a, .imp-links a {
+    background-color: #2d2d2f;
+    color: #acbf37;
+    border: none;
+    font-size: 0.8rem;
+    padding: 5px 0px;
+    text-transform: capitalize;
+    text-align: left;
+    margin: 0;
+}
+.site-map a:hover, .imp-links a:hover {
+    color: #fff;
+}
+.newsletter a {
+    padding : 5px 10px;
+	background-color: #acbf37;
+}
+
+
+/* ----style for the footer logo and text---- */
+
+.parent {
+    padding: 10px;
+    background-color: #000;
+    text-align: center;
+    font-size: 0.2rem;
+    color: darkgray;
+}
+.inner, .inner h1 {
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    height: 2rem;
+}
+.inner img {
+    height: 1.5rem;
+    opacity: 0.7;
+}
+.inner p {
+}
+
+
+/* style for screen size over 700px  */
+
+@media screen and (min-width: 700px) {
+	
+/* style for hero image font */
+.hero h1 {
+    font-size: 3rem;
+    padding-left: 3rem;
+}
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    text-align: left;
+    background-repeat: no-repeat;
+}
+	
+	
+/* style for footer */	
+.footer-container {
+    display: grid;
+    text-align: left;
+    grid-gap: 3rem;
+    grid-template-columns: auto auto auto;
+    padding: 2rem 7rem;
+}
+.footer-container p, .footer-container a {
+    font-size: 0.8rem;
+    letter-spacing: 0;
+}
+.full-width-1col-text {
+    margin: 5rem;
+}
+}
+
+
+
+/* style for screen size over 900px  */
+	
+@media screen and (min-width: 900px) {
+ .hero h1 {
+ font-size: 3.5rem;
+}
+ .full-width-1col > .full-width-1col-bg  > .full-width-1col-caption {
+ float: left;
+ text-align: left;
+}
+ .full-width-1col > .full-width-1col-bg  > .full-width-1col-caption > h1 {
+ font-size: 2.5rem;
+}
+ .footer-container {
+ display: grid;
+ grid-template-columns: 2fr 2fr auto auto auto;
+}
+ .footer-container h4 {
+ font-size: 0.8rem;
+ line-height: 18px;
+}
+ .full-width-1col-text {
+ margin: 5rem 20rem;
+}
+}
+
+
+
+/* style for screen size over 700px and 900px  */
+
+@media only screen 
+	and (min-width: 700px) 
+	and (min-width: 900px) {
+	
+
+ .wrapper {
+ background-color:#e6e7e8;
+}
+ #index-page {
+ background-color: #fff;
+}
+ body {
+ background-color:#e6e7e8;
+}
+ #events-hero, #about-hero,  #science-hero, #donate-hero, #exibition-hero {
+ height: 30rem;
+}
+ #index-hero {
+ height: 50rem;
+}
+ #index-hero > article {
+ width: 22rem;
+ padding-left: 3rem;
+ padding-bottom: 3rem;
+ text-align: left;
+}
+ nav {
+ height: 3.2rem;
+}
+ nav ul {
+ display: grid;
+ width:60%;
+ grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+ align-items: center;
+}
+ nav li {
+ font-size: 0.8rem;
+ display: inline;
+ padding: 10px 16px;
+ margin: 0;
+}
+ .multi-column {
+ text-align: left;
+ margin: 0rem 7rem;
+}
+ .multi-column > ul > li > figcaption {
+ font-size: 1.1rem;
+ letter-spacing: 0;
+}
+ .multi-column > ul > li > figcaption > span {
+ font-size: 0.9rem;
+}
+ #columns_3 > ul > li {
+ border: 15px solid #fff;
+}
+ #columns_3_text {
+ text-align: center;
+}
+ #columns_1 {
+ text-align: left;
+}
+ #columns_1 > ul > li > img {
+ width: 100%;
+ height: 20rem;
+}
+ .full-width-1col-bg{
+ margin: 2rem 7rem;
+ } 
+}
