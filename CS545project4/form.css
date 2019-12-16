@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/*!--
+Shasha, Wang
+CS545_00
+Assignment #3
+Fall 2019
+--*/
+
+/* error message style */
+.required,
+.error {
+  color: orangered;
+  font-size: 12px;
+}
+
+/* form generic style */
+.form-newsletter {
+  opacity: 0.9;
+  margin: 0;
+  background-color: #fff;
+  color: #000;
+  padding: 50px;
+/*  line-height: 30px;*/
+}
+
+.form-newsletter>form>h3 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* hero image fix to cover size */
+#contact-hero {
+  background-size: cover;
+}
+
+
+/* form fieldset and legend style */
+form>fieldset {
+  border: 0;
+  padding: 30px 0px;
+}
+
+legend {
+  padding: 0.8vw;
+  width: 100%;
+  opacity: 0.7;
+  background-color: #acbf37;
+  text-align: center;
+}
+
+form>div {
+  padding: 0px 50px;
+}
+
+/*  input text style */
+input[type='text']{
+  color: #57833b;
+  border: none;
+  font-size: 16px;
+  border-bottom: solid 1px lightgray;
+}
+
+::placeholder {
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+/*  input radio and checkbox style */
+input[type='radio'],
+input[type='checkbox'] {
+  width: 30px;
+  margin: 10px;
+  height: auto;
+}
+
+/*  dropdown style */
+form>fieldset>select {
+  width: 250px;
+  height: 40px;
+  box-shadow: 0px 0px 8px lightgray;
+  background-color: #acbf37;
+  font-size: 16px;
+  border-radius: 0;
+  opacity: 0.8;
+}
+
+input[type='submit'] {
+  background-color: #acbf37;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #acbf38;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+input[type='submit']:hover {
+  background-color: #fff;
+  color: #acbf37;
+}
+
+/* form confirmation message style */
+#summary {
+  margin: 5px;
+  padding: 35px;
+  line-height: 30px;
+  border: 1px solid lightgray;
+}
