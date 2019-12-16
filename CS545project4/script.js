@@ -97,11 +97,11 @@ function validPhone(id) {
   var phone = document.getElementById(id).value;
 
   //unacceptable chars and numbers
-  var pattern = new RegExp(/[~`''\s!@#$%\^&*+=\[\]\;,\/{}|\":<>.\?]/);
+  var pattern = new RegExp(/^[0-9-]*$/);
   if (pattern.test(phone)) {
-    return true;
+    return true;  //good user input
   }
-  return false; //good user input
+  return false; 
 }
 
 
@@ -110,8 +110,8 @@ function checkPhone() {
   var elMsg = document.getElementById('phoneErr');
   if (this.value.length < 1) { // If element is less than 1 character
     elMsg.textContent = 'Phone number is required'; // Set message
-  } else if (validPhone('phone')) {
-    elMsg.textContent = 'Special characters are not allowed';
+  } else if (!validPhone('phone')) {
+    elMsg.textContent = 'Invalid phone number';
   } else { // Otherwise
     elMsg.textContent = ''; // Clear message
   }
