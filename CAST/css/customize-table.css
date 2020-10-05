@@ -1,0 +1,131 @@
+/* #table-wrapper {
+  height: 100%;
+} */
+
+body {
+  background-color: #e8edf7;
+}
+
+thead {
+  background-color: #f5f6fa;
+  color: #9ca1b2;
+  font-size: 0.8rem;
+  border-color: transparent;
+}
+tbody {
+  font-size: 0.9rem;
+}
+
+.narrow {
+  width:90%
+}
+
+.table-header th {
+  border-color: transparent;
+}
+
+.table-body tr th,
+.table-body tr td {
+  background-color: white;
+  border-color: transparent;
+}
+
+/* space between each row */
+.spacer {
+  background-color: #e8edf7;
+  height: 0.8rem;
+  border-color: transparent;
+}
+
+.table th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.table th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.table > tbody > tr > td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.rating-status {
+  border-radius: 5rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 100vh;
+}
+.not-rated {
+  background-color: #d8ecfb;
+  color: #64b1fc;
+}
+
+.rated {
+  background-color: #ddecda;
+  color: #64a53c;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th {
+  vertical-align: middle;
+}
+.table > tbody > tr > td {
+  padding: 1rem;
+}
+
+.btn-action {
+  background-color: #7c0945;
+  margin-top: 0.8rem;
+}
+
+.btn-student {
+  width:8rem;
+}
+
+.btn-action:hover {
+  background-color: #874563;
+}
+
+.note {
+  color: #747bd1;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.card {
+  box-shadow: none;
+}
+ul {
+  list-style-type: none;
+}
+ul li{
+  padding: 0.3rem 0;
+}
+.btn-success {
+  margin: 0;
+}
+.btn-danger {
+  margin: 0;
+}
+.rate-yes {
+  font-weight: bold;
+  background-color: #70cd56;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+ }
+
+ .rate-no {
+  font-weight: bold;
+  background-color: #e24d49;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+ }
+
+ #report-issue {
+   background-color: #dea936;
+
+  }
+ 
+
+

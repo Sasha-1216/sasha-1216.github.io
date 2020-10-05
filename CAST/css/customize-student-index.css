@@ -1,0 +1,126 @@
+/* ---------------------------- */
+/* student index page style */
+
+.jumbotron {
+  background-image: url("../image/banner-01-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-bottom: 0;
+}
+.display-4 {
+  padding-top:150px;
+  font-size: 27px;
+  font-weight: bold;
+  color: #dcdfed;
+  padding-left:25px;
+}
+
+.lead {
+  width: 40%;
+  font-size: 14px;
+  padding-left:25px;
+  color: #bfbfce;
+  padding-bottom:50px;
+
+}
+
+.card{
+    top: -3rem;
+    position: relative;
+    border-radius: 5px;
+    color: #ffffff;
+} 
+
+.card p {
+  color: #192853;
+}
+
+.card-container {
+  background-color: #e5e5ec;
+} 
+
+#price h4 {
+  color: #ad94f0;
+}
+
+#test-time h4 {
+  color: #1fbfd2;
+}
+
+#requirement h4 {
+  color: #fe7b9b;
+} 
+
+#language-container {
+  background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('../image/worldmap.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100vw;
+  height:auto;
+}
+
+#intermediate h1 {
+ color: #fe7b9b;
+ font-weight: bold;
+ margin-top: 100px;
+ margin-bottom: 60px;
+}
+
+#advanced h1 {
+  color: #1fbfd2;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 60px;
+ }
+
+ .card {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+       box-shadow: 0 8px 6px -6px black;
+ }
+
+ .figure-img {
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  width:120px;
+ }
+
+ figure {
+  -webkit-transition: all .5s ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all .5s ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all .5s ease-in;
+  -moz-transform: scale(1);
+  transition: all .5s ease-in;
+  transform: scale(1);   
+ }
+
+  figure:hover {
+    -webkit-transition: all .5s ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all .5s ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all .5s ease-in;
+    -moz-transform: scale(1.2);
+    transition: all .5s ease-in;
+    transform: scale(1.2); 
+ }
+
+ a:link {
+   text-decoration: none;
+ }
+
+
+
+
+
+
+
+
+
+

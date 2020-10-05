@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CAST</title>
+    <!-- Style.css -->
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fontawesome/all.min.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fontawesome/fontawesome.min.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="css/customize.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="font/stylesheet.css"
+      type="text/css"
+      charset="utf-8"
+    />
+  </head>
+  <body id="audio-test-wrapper">
+
+    <div class="container-fluid my-0">
+
+    <div class="container narrow text-center my-5">
+        <i class="far fa-check-circle fa-5x my-4"></i>
+        <h1>It worked!</h1>
+        <p class="font-weight-bold">Congraduations </p>
+        <p>Our system has detected that your browser meets the 
+          necessary requirements to run the CAST. However, 
+          we would like to test the audio levels on your 
+          computer before we begin. You will find an audio 
+          player below this section that you can use to 
+          test your headset volume, and a recorder that 
+          you can use to check your microphone levels. 
+          Once you have determined that your volumes 
+          are at an acceptable level, you may 
+          continue on to the registration page.</p>
+      </div>
+
+      <div class="container narrow text-center my-5">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="image/headphone.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-title"> Audio Volume Check</h3>
+            <p class="card-text">Please click the button below to l
+                isten to a sample recording. While listening to 
+                the audio, adjust your headset or speakers 
+                to a volume that is comfortable for you.
+            </p>
+            <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <br><br>
+            <p class="card-text"><b>Were you able to hear the sample audio adequately?</b></p>
+            <button class="btn btn-success">YES</button>
+            <button class="btn btn-danger">NO</button>
+            <p class="card-text"><small class="text-muted">Excellent! 
+                Please continue to the microphone test section below.
+            </small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="image/microphone.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-title">Microphone Check</h3>
+            <p class="card-text">Please use the recorder below to record a sample of 
+                your voice. If you cannot hear the sample clearly, reload this page 
+                and adjust your microphone settings. Make sure that you use a headset 
+                and not the internal microphone.</p>
+                <audio controls>
+                    <source src="horse.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+                <br><br>
+                <p class="card-text"><b>Were you able to hear the sample audio adequately?</b></p>
+                <button class="btn btn-success">YES</button>
+                <button class="btn btn-danger">NO</button>
+            <p class="card-text"><small class="text-muted">Excellent! 
+                Please continue to the microphone test section below.</small></p>
+          </div>
+        </div>
+      </div>
+
+      <a href="start-a-test.html"> <button type="submit" class="btn btn-action">Continue to CAST test</button></a>
+
+    </div>
+</div>
+
+
+  </body>
+</html>

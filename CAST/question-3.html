@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CAST</title>
+    <!-- Style.css -->
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fontawesome/all.min.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="css/customize.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="css/customize-question.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/customize.js"></script>
+  </head>
+  <body>
+    <div id="question-wrapper">
+      <!-- question progress sectction -->
+      <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-xl-1  question-progress text-center complete">Warm up Question</div>
+          <div class="col-xl-1  question-progress text-center complete">Question <b>1</b></div>
+          <div class="col-xl-1  question-progress text-center complete">Question <b>2</b></div>
+          <div class="col-xl-1  question-progress text-center question-active">Question <b>3</b></div>
+          <div class="col-xl-1  question-progress text-center">Question <b>4</b></div>
+          <div class="col-xl-1  question-progress text-center">Question <b>5</b></div>
+          <div class="col-xl-1  question-progress text-center">Wind Down</div>
+        </div>
+
+      <!-- question cards container -->
+      <div class="container-fluid" id="question-container">
+        <div class="text-center">
+          <h1>Question: 2 of 5<span>
+            <p class="highlight-text-2"><i class="fas fa-exclamation-triangle highlight-text-2"></i>
+              WARNING: THE TEST IS NOW LIVE, DO NOT PRESS THE BACK OR RELOAD BUTTONS</p>
+          </span></h1>
+        </div>
+        
+          
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-header">1. Situation Transcript:</div>                           
+              <p class="card-body py-4 px-4">
+                Vous bavardez au t茅l茅phone avec votre amie de Pondich茅ry. 
+                Elle vous dit qu'il pleut tr猫s fort chez elle. 
+                Vous parlez alors du climat, de votre saison 
+                pr茅f茅r茅e et de la raison pour laquelle vous l'aimez.
+              </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">2. Listen to the Prompt: </div>
+              <p class="card-body text-center py-4 px-4">
+                Press the button to listen to the prompt.
+                <audio controls><source src="horse.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+              </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">3. Record Your Response:</div>                           
+              <p class="card-body text-center py-4 px-4">
+                You will only get one attempt at your response. Click the
+                <b>Blue Record Button</b> to begin. The button will turn red.
+                Click the <b>Red Button</b> when you are finished. <br>
+                <audio controls><source src="horse.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls><source src="horse.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls><source src="horse.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </p>
+            </div>
+          </div>
+        <!-- end of question cards container -->
+            
+        <!-- Modal -->
+       <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Question 3 of 5</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+         </div>
+         <div class="modal-body text-center px-5">
+          <b>You are about to begin question: 3 of 5</b>
+          <br>Your response to this question will be
+          <b class="highlight-text-2">GRADED</b>. The purpose of this exercise is to get you 
+          comfortable with the testing environment.<br><br>
+          <i class="fas fa-exclamation-triangle highlight-text-2"></i>
+          <span class="highlight-text-2"><b>Allow microphone access!<br>
+          <br>Do not press the reload or back button <br>on your browser during a test!</b></span>
+         </div>
+         <div class="modal-footer">
+          <a type="button" class="btn btn-action" href="question-4.html">Continue Your Test</a>
+         </div>
+        </div>
+       </div>
+      </div>
+    </div>
+      <!-- end of question cards container -->
+    
+       </div>
+       <br><br><br>
+      </div>
+      </div>
+     </div>
+
+    </div>
+    <!-- the end of wrapper  -->
+
+  </body>
+</html>

@@ -1,0 +1,235 @@
+#admin-login-wrapper h3 {
+  font-weight: bold;
+}
+
+.login-left-panel {
+  display: none;
+}
+/* Large devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+  .login-left-panel {
+    background-image: url('../image/conversation.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: left;
+    display: block;
+  }
+}
+.narrow {
+  width: 50%;
+}
+
+.btn-action {
+  background-color: #7c0945;
+  margin-top: 0.8rem;
+}
+
+.btn-action:hover {
+  background-color: #874563;
+}
+
+/* use the same button style teacher login  */
+.btn-teacher {
+  /* background-color: #dea936; */
+  width: auto;
+  padding: 0.5rem 0.5rem;
+  margin: 1rem auto;
+}
+
+/* text style */
+
+.muted {
+  color: darkgray;
+  font-size: 0.8rem;
+}
+
+.note {
+  color: #747bd1;
+  font-size: 0.8rem;
+}
+.highlight {
+  color: #dea936;
+  font-weight: bold;
+}
+.highlight:hover {
+  text-decoration: none;
+}
+
+form label {
+  font-weight: bold;
+}
+form label .forget-password {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #d4527c;
+}
+
+/* superuser dashboard page  */
+#dash-board-wrapper {
+  background-color: #f9f9f9;
+}
+
+/* title style */
+.title {
+  background-color: #ececed;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: none;
+  color: #a9a9ad;
+  border-radius: 0.35rem;
+  margin: 15px 0px;
+}
+
+.icon {
+  position: relative;
+  left: 75%;
+}
+
+.superuser {
+  padding: 1rem 1.5rem;
+  border-radius: 0.35rem;
+  background-color: white;
+  margin: 15px;
+  width: 100%;  
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(100, 100, 100, 0.3);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(100, 100, 100, 0.3);
+  box-shadow: 0px 0px 15px 10px rgba(211, 210, 210, 0.3);
+
+  -webkit-transition: all .5s ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all .5s ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all .5s ease-in;
+  -moz-transform: scale(1);
+  transition: all .5s ease-in;
+  transform: scale(1);   
+}
+
+
+#dash-board-wrapper .superuser:hover {
+      -webkit-transition: all .5s ease-in;
+      -webkit-transform: scale(1.1);
+      -ms-transition: all .5s ease-in;
+      -ms-transform: scale(1.1);   
+      -moz-transition: all .5s ease-in;
+      -moz-transform: scale(1.1);
+      transition: all .5s ease-in;
+      transform: scale(1.1); 
+      text-decoration: none;
+}
+  
+
+
+/* responsive width for the .superuser class ( each menu item )*/
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .superuser{
+    width: 40%;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .superuser {
+    width: 20%;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .superuser {
+    width: 20%;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .superuser {
+    width: 20%;
+  }
+}
+
+.item {
+  align-self: baseline;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+#teacher-reviewer-1 {
+  background-color: #70cd56;
+}
+#teacher-reviewer-2 {
+  background-color: #5c4ae4;
+}
+#teacher-reviewer-3 {
+  background-color: orange;
+}
+#teacher-reviewer-4 {
+  background-color: #1fbfd2;
+}
+/* override teacher review text and icon to white */
+#teacher-reviewer-1 p,
+#teacher-reviewer-1 .teacher,
+#teacher-reviewer-2 p,
+#teacher-reviewer-2 .teacher,
+#teacher-reviewer-3 p,
+#teacher-reviewer-3 .teacher,
+#teacher-reviewer-4 p,
+#teacher-reviewer-4 .teacher,
+#rater p,
+#rater .teacher,
+#lang-super-1 p,
+#lang-super-1 .teacher,
+#lang-super-2 p,
+#lang-super-2 .teacher,
+#lang-super-3 p,
+#lang-super-3 .teacher {
+  color: white;
+}
+
+
+#rater {
+  background-color: #ea4c8a;
+}
+#lang-super-1 {
+  background-color: #5c7ae8;
+}
+#lang-super-2 {
+  background-color: #1fbfd2;
+}
+
+#lang-super-3 {
+  background-color: #00adf2;
+}
+
+/* icon style  */
+.fa-key {
+  color: #d4527c;
+}
+
+.fa-eye, 
+.fa-file-audio {
+  color: #dea936;
+}
+.fa-envelope,
+.fa-table {
+  color: #ad94f0;
+}
+.fa-file-alt,
+.fa-clipboard-check,
+.fa-database{
+  color: #7c0945;
+}
+.fa-plus-circle {
+  color: #70cd56;
+}
+
+.fa-edit,
+.fa-cog,
+.fa-info-circle {
+  color: #1fbfd2;
+}
+
+
